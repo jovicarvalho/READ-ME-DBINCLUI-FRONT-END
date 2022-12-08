@@ -89,7 +89,7 @@ $ git flow feature start DBI-01 <-- Número do card no Trello
 ```
 | Branch | Funcionalidade | 
 | :-: | :-: |
-| Feature | Branch para desenvolvimento de uma funcionalidade específica. Devem ter o nome iniciado por feature, por exemplo: "featre/sistemacadastral". São criadas sempre a partir da branch "develop".|
+| Feature | Branch para desenvolvimento de uma funcionalidade específica. Devem ter o nome iniciado por feature, por exemplo: "feature/sistemacadastral". São criadas sempre a partir da branch "develop".|
 | Release | Serve como ponte para fazer o merge da Develop para a Main. Caso haja alguma alteração, também deve ser sincronizada com a Branch "develop".|
 | Bugfix | Criada a partir da branch "release" para realizar correções de erros encontrados no sistema em desenvolvimento. Quando concluída, ela é excluída após realizar o merge com a branch "release".|
 | Hotfix | Criada a partir da Main para realizar correções encontradas no sistema em produção. Quando concluída, ela é excluída após realizar o merge com a branch "develop" e "main". |
