@@ -27,7 +27,7 @@ A Biblioteca/Framework principal utilizada será ReactJS.
 $ npm install
 ```
 
-### Iniciando o Frontend
+### Iniciando o Frontend 
 
 ```
 $ npm start
@@ -94,7 +94,7 @@ $ git flow feature start DBI-01 <-- Número do card no Trello
 | Bugfix | Criada a partir da branch "release" para realizar correções de erros encontrados no sistema em desenvolvimento. Quando concluída, ela é excluída após realizar o merge com a branch "release".|
 | Hotfix | Criada a partir da Main para realizar correções encontradas no sistema em produção. Quando concluída, ela é excluída após realizar o merge com a branch "develop" e "main". |
 
-### Seguindo o exemplo de uma branch "feature", publique-a no card do Trello com as mudanças feitas.
+### Seguindo o exemplo de uma branch "feature", publique-a no card do Trello com as mudanças feitas. 💡
 
 ```
 $ git flow feature publish DBI-01 <- Número do card no Trello.
@@ -119,109 +119,41 @@ $ git push
 ```
 <p> para atualizar a branch "develop" no repositório. </p>
 
-### Para realizar o _pull request_ é necessário mudar o base repository para o repositório que possui o "dbinclui-org"
-
-<img src="https://i.imgur.com/2D3kkjl.png"/>
-
-### Confirme se a _develop_ está marcada na _base_ e se a sua _feature_ está no _compare_, após isso já é possível clicar no botão para criar o _pull request_
-
-<img src="https://i.imgur.com/kRLdwkc.png"/>
-
-### Mude o título do _pull request_ para o nome da feature + o título do card do Trello, como mostrado abaixo, após isso já é possível clicar no botão para criar o _pull request_
-
-<img src="https://i.imgur.com/AZywbED.png"/>
-
-### Após as mudanças serem aprovadas por duas pessoas e serem passadas no teste, será possível realizar o _merge request_
-
-<img src="https://i.imgur.com/V76w9Bh.png"/>
 
 ---
 
-## Desenvolvendo o Projeto
+## Desenvolvendo o projeto ⚡
 
-### Criar Componente
+### Criar Componente 
 
 Para que haja uma padronização na criação dos componentes, este deve seguir o seguinte modelo de construção:
 
+- Pasta do componente com letra *maiúscula*.
+- Deve ser criado um arquivo _index.tsx_ dentro da pasta.
 - Deve ser feita a importação do _React_ no escopo do componente.
 - Deve conter uma _interface_ com as propriedades do componente.
   - Nome da _interface_ deve ter o sufixo _Props_.
-- Deve criar uma constante
-  - Nome deve ter o prefixo _Component_
-  - Recebe _React.FC_, no qual recebe a _interface_
-  - Deve retornar elemento _JSX_
-  - O código a ser feito dentro do _return_ deve está dentro <></> (abreviatura para _React.Fragment_)
-- O componente de ser exportado ao final.
+- Deve criar uma constante com _arrow function_ para o componente.
+  - Deve ser tipado como _React.FC(Nome da Interface)_.
+  - Deve retornar um elemento _JSX_.
+- O componente deve ser exportado na _constante_.
 
 Exemplo:
 
 ```tsx
 import React from 'react';
-export interface ComponetNameProps {}
+export interface FooterProps {}
 
-export const ComponetName: React.FC<ComponentNameProps> = (): JSX.Element => {
-  return <>...</>;
-};
-
-export default ComponentName;
+export const Footer: React.FC<FooterProps> = (): JSX.Element => {
+ return (
+    <>
+      <footer className="footer">
+        <a
+          href="https://www.facebook.com/DBServerTI/"
+          target={'_blank'}
+          rel="noopener noreferrer"
+        >
+          <FacebookIcon color="secondary" style={{ fontSize: '32px' }} />
+        </a>
 ```
 
-<!-- ## Commit Semântico ⚡
-
-Pequenas alterações que não são novas funcionalidades.
-
-```
-
-chore: add Oyster build script
-
-```
-
-Semelhante a uma wiki; documentações etc.
-
-```
-
-docs: explain hat wobble
-
-```
-
-Criação de Nova funcionalidade.
-
-```
-
-feat: add beta sequence
-
-```
-
-Correção de bugs.
-
-```
-
-fix: remove error message
-
-```
-
-Refatoração de um código.
-
-```
-
-refactor: share logic 4d3d3d3
-
-```
-
-Alteração em estilos, formatação de código etc.
-
-```
-
-style: convert tabs to spaces
-
-```
-
-Criação de testes da sua aplicação.
-
-```
-
-test: ensure that increment
-
-```
-
-Para saber mais sobre os commits semânticos, [acesse este artigo](https://blog.geekhunter.com.br/o-que-e-commit-e-como-usar-commits-semanticos/). -->
