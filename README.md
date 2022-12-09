@@ -19,6 +19,10 @@ A Biblioteca/Framework principal utilizada será ReactJS.
 | Prettier | https://prettier.io | https://www.npmjs.com/package/prettier |
 | Babel | https://babeljs.io/docs/en/usage | https://www.npmjs.com/package/babel-install |
 
+## Mapa de Tecnologias - Figma 📰
+
+###  Link para o Figma do projeto: https://www.figma.com/file/gdAo2xO9vQsBA5HRNOuQAW/DB-Inclui-2022?node-id=10%3A2
+
 ## Executando o Projeto 💻
 
 ### Instalando os módulos
@@ -156,4 +160,5 @@ export const Footer: React.FC<FooterProps> = (): JSX.Element => {
           <FacebookIcon color="secondary" style={{ fontSize: '32px' }} />
         </a>
 ```
+
 
