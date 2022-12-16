@@ -113,7 +113,7 @@ Switched to a new branch 'feature/DBI-01'
 ``` 
 
 ## ⚠ Após a criação e code review, deve-se passar para o quadro de "Aguardando Merge" e as pessoas responsáveis irão seguir o seguinte passo: 
-### Para finalizar a branch referente à tarefa: ⚠
+### Para finalizar a branch referente à tarefa:
 
 ```
 $ git flow feature finish DBI-01
